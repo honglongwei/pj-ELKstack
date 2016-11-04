@@ -40,11 +40,11 @@ Shield是需要licese的(30天试用期),若shield不收费。用sheild是最好
 在Logstash服务器上，修改output模块的配置文件，例如： 
 output { 
     elasticsearch { 
-        host => “192.168.6.144” 
-        protocol => “http” 
-        index => “logstash-%{type}-%{+YYYY.MM.dd}” 
-        user => “logstashserver” #在这里加上Shield中role为Logstash的用户名 
-        password => “woshimima” #别忘了密码 
+        host => "192.168.6.144" 
+      # protocol => "http" 
+        index => "logstash-%{type}-%{+YYYY.MM.dd}"
+        user => "logstashserver" #在这里加上Shield中role为Logstash的用户名 
+        password => "woshimima" #别忘了密码 
     } 
 
 # stdout { codec => rubydebug } 
@@ -67,8 +67,8 @@ bin/shield/esusers useradd kibanaserver -r kibana4_server
 3
 4
 在其下面添加： 
-elasticsearch.username: “kibanaserver” 
-elasticsearch.password: “123456”
+elasticsearch.username: "kibanaserver"
+elasticsearch.password: "123456"
 
 启动kibana；
 
