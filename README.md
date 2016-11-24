@@ -240,6 +240,10 @@ yum 安装
 源码安装
     # wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.2.tar.gz
     # tar zxf elasticsearch-1.7.2.tar.gz -C /usr/local/
+
+rpm包安装
+    # wget http://packages.elastic.co/elasticsearch/2.x/centos/elasticsearch-2.4.1.rpm
+    # rpm -ivh elasticsearch-2.4.1.rpm
 ```
 
 #### 2、修改elasticsearch配置文件elasticsearch.yml并且做以下修改.
